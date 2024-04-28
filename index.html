@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plus minus into divide</title>
+   <style>
+    .parent
+    {
+        height: 300px;
+        width: 300px;
+        margin: auto;
+        border: 2px solid black;
+        padding-top: 15px;
+    }
+    #buttons
+    {
+    display: flex;
+    justify-content: space-evenly;
+    
+    width: 80%;
+    
+    }
+    .showresult
+    {
+        border: 2px solid black;
+        height: 20px;
+        width: 200px;
+    }
+    #buttons button
+    {
+        background-color: white;
+
+    }
+   </style>
+</head>
+<body>
+    <h1 align="center">java script practice</h1>
+
+  <center>  <h3>Add Two number progaram </h3></center>
+<center>
+  <div class="parent">
+    <input type="text" name="" id="first" placeholder="Enter your first number"> <br> <br>
+    <input type="text" name="" id="second" placeholder="Enter your second number">
+    <br> <br>
+    <div id="buttons">
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+        <button id="into">*</button>
+        <button id="divide">/</button>
+    </div>
+    <br> <br>
+    <div class="showresult">
+
+    </div>
+    <br><br>
+    <button id="reset">reset</button>
+  </div>
+</center>
+
+
+    <script>
+
+ let  res=document.querySelector("#reset");
+ res.addEventListener("click",function()
+ {
+    let one=document.querySelector("#first").value=0;
+        let two=document.querySelector("#second").value=0;
+        let seen=document.querySelector(".showresult");
+        seen.innerHTML=0;
+ })
+
+
+
+
+
+
+
+
+
+    let how1=document.querySelector("#plus")
+    let how2=document.querySelector("#minus")
+    let how3=document.querySelector("#into")
+    let how4=document.querySelector("#divide")
+    //  console.log(how)
+    how1.addEventListener("click",function()
+    {
+        let one=document.querySelector("#first").value;
+        let two=document.querySelector("#second").value;
+        let add= parseInt(one)+ parseInt(two);
+        //  console.log(add)
+        let seen=document.querySelector(".showresult");
+         seen.innerHTML=add;
+       
+        
+    })
+    how2.addEventListener("click",function()
+    {
+        let one=document.querySelector("#first").value;
+        let two=document.querySelector("#second").value;
+        let add= parseInt(one)- parseInt(two);
+        //  console.log(add)
+        let seen=document.querySelector(".showresult");
+         seen.innerHTML=add;
+       
+        
+    })
+    how3.addEventListener("click",function()
+    {
+        let one=document.querySelector("#first").value;
+        let two=document.querySelector("#second").value;
+        let add= parseInt(one)* parseInt(two);
+        //  console.log(add)
+        let seen=document.querySelector(".showresult");
+         seen.innerHTML=add;
+       
+        
+    })
+    how4.addEventListener("click",function()
+    {
+        let one=document.querySelector("#first").value;
+        let two=document.querySelector("#second").value;
+        let add= parseInt(one)/ parseInt(two);
+        //  console.log(add)
+        let seen=document.querySelector(".showresult");
+         seen.innerHTML=add;
+       
+        
+    })
+        
+        
+    </script>
+</body>
+</html>
